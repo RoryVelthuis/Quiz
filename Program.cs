@@ -6,12 +6,14 @@ namespace QuizGame
     {
         static void Main(string[] args)
         {
-            string[] questions = { "How many elements are in the periodic table?" };
-            string[] answers = { "118" };
+            string[] questions = { "How many elements are in the periodic table?","Which planet in the milky way is the hottest?" };
+            string[] answers = { "118","Venus" };
             int score = 0;
+
 
             do
             {
+                score = 0;
                 for(int i = 0; i < questions.Length; i++)
                 {
                     Console.WriteLine(questions[i]);
@@ -25,6 +27,7 @@ namespace QuizGame
                     {
                         Console.WriteLine("Incorrect");
                     }
+                    Console.WriteLine($"score {score}");
                 }
             } while (true);
 
