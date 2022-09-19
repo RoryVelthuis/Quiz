@@ -9,8 +9,7 @@ namespace QuizGame
             string[] questions = { "How many elements are in the periodic table?","Which planet in the milky way is the hottest?" };
             string[] answers = { "118","Venus" };
             int score = 0;
-
-
+            string playing = "y";
             do
             {
                 score = 0;
@@ -29,6 +28,10 @@ namespace QuizGame
                     }
                     Console.WriteLine($"score {score}");
                 }
+                Console.WriteLine($"Quiz complete\nYour score was {score}/{questions.Length}");
+                Console.WriteLine("Do you want to take the quiz again? (Y / N)");
+                playing = Console.ReadLine();
+
             } while (true);
 
         }
